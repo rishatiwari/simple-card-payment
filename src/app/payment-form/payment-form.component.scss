@@ -1,0 +1,29 @@
+.wrapper {
+//   width: 98vw;
+//   height: 95vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around; 
+    max-width: 40%;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+  .payment-card {
+    margin-bottom: -10px;
+    z-index: 1;
+    color: white;
+
+    background-image: linear-gradient(to top right, #843E3D, #040B2E);
+
+  
+    }
+
+    .row-width{    
+        margin: 2px;
+        width: 32%;
+    }
+
+}
+.full-width {
+    width: 100%;
+    }

@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+
+.mat-form-field-empty.mat-form-field-label {
+    color: #ffffff;
+}
+
+/* Border */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white;
+  }
+  .amount-wrapper > .mat-card-content > .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: #843E3D;
+    color:#843E3D !important;
+    border-radius: 5px;
+  }
+  /* Font color */
+  input.mat-input-element {
+    color: white;
+  }
