@@ -48,7 +48,7 @@ export class PaymentFormComponent implements OnInit {
     this.store.select(payment).subscribe(data => 
       {
         this.payment = data;        
-        console.log("card", this.payment);
+        console.log("here", this.payment);
       })
   }
 
