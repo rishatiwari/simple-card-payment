@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <mat-card class="payment-card">
+    <mat-card-header>
+      <mat-card-title>
+        <div id="check-mark">
+          <mat-icon class="icon">check_circle_outline</mat-icon>
+        </div>
+        <p class="heading-payment">Payment Complete</p>
+        <p class="heading"> <span>Amount Recieved:</span> {{amount | currency:'USD'}} </p>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="payment-card-content">
+      <p class="content">
+        Thankyou, Your payment has been successfull completed.
+      </p>
+      <p class="content">
+        A confirmation email has been sent to xxxxxx@gmail.com
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

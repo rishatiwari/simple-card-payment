@@ -1,6 +1,6 @@
 <div class="wrapper">
-    <!--<p>{{creditcard$ | async}}</p>
-    <p>{{payment.amount}}</p>-->
+    <!--<p>{{payment$ | async | json}}</p>
+    <p>{{payment | json}}</p>-->
 
     <form [formGroup] = "paymentForm" class="payment-form">
     <mat-card class="payment-card">
@@ -20,18 +20,18 @@
                     <mat-label>Expiry Month</mat-label>
                     <mat-select formControlName="expMonth">
                         <mat-option *ngFor="let value of NewMonth" value="{{value}}">{{value}}</mat-option>
-                    </mat-select>                    
+                    </mat-select>
                   </mat-form-field>
 
                   <mat-form-field appearance="outline" class="row-width">
                     <mat-label>Expiry Year</mat-label>
                     <mat-select formControlName="expYear">
                         <mat-option *ngFor="let value of years" value="{{value}}">{{value}}</mat-option>
-                    </mat-select>                    
+                    </mat-select>
                   </mat-form-field>
                   <mat-form-field appearance="outline" class="row-width">
                     <mat-label>CVV</mat-label>
-                    <input class="text-color" matInput #cvv placeholder="CVV" formControlName="cvv">
+                    <input class="text-color" matInput #cvv placeholder="CVV" formControlName="cvv" maxlength="3">
                 </mat-form-field>
         </mat-card-content>
     </mat-card>
@@ -44,7 +44,7 @@
         <span matPrefix>$&nbsp;</span>
         <span matSuffix>.00</span>
     </mat-form-field>
-    <button mat-raised-button color="primary" class="full-width" (click)="pay()">Pay Now</button>
+    <button mat-raised-button color="primary" class="full-width" [class.spinner]="loading" (click)="pay()"  [disabled]="loading || paymentForm.invalid" >Pay Now</button>
 </mat-card-content>
 </mat-card>
     </form>

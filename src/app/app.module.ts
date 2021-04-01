@@ -11,16 +11,18 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { StoreModule } from '@ngrx/store';
-import { reducer,metaReducers } from './payment.reducer';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { PaymentConfirmationComponent } from './payment-confirmation/payment-confirmation.component';
+import { MatIconModule } from '@angular/material/icon';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaymentFormComponent
+    PaymentFormComponent,
+    PaymentConfirmationComponent
   ],
   imports: [
     BrowserModule,
@@ -28,13 +30,12 @@ import { HttpClientModule, HttpHeaders } from '@angular/common/http';
     BrowserAnimationsModule,
     MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule, 
-    MatCardModule, 
-    MatGridListModule, 
-    MatSelectModule, 
+    ReactiveFormsModule,
+    MatCardModule,
+    MatGridListModule,
+    MatSelectModule,
     MatInputModule,
-    MatButtonModule,HttpClientModule,
-    StoreModule.forRoot({payment:reducer}),
+    MatButtonModule,HttpClientModule,MatIconModule,
     //StoreModule.forRoot(reducers, { metaReducers })
   ],
   providers: [],

@@ -1,0 +1,53 @@
+.wrapper {
+  max-width: 40%;
+  margin: auto;
+  margin-top: 5%;
+  text-align: center;
+
+  .payment-card {
+    margin-bottom: -10px;
+    z-index: 1;
+    color: white;
+    background-image: linear-gradient(to top right, #843E3D, #040B2E);
+  }
+
+  .mat-card-header {
+    display: block;
+  }
+
+  .icon {
+    font-size: 50px;
+  }
+  .heading {
+    font-size: x-large;
+  }
+  .heading > span {
+    font-size: large;
+  }
+  .heading-payment {
+    font-size: x-large;
+    margin-bottom: 25px;
+  }
+
+
+}
+
+
+
+#payment-wrapper {
+  text-align: center;
+  margin: auto;
+  border: 1px solid;
+  background-color: #d8d2d2;
+  width: 50%;
+
+  #check-mark > mat-icon {
+
+  }
+
+
+  .content {
+    font-size: 18px;
+    font-family: initial;
+  }
+}
